@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require
-
+require './config/environments'
 Dir.glob('./lib/*.rb') do |model|
   require model
 end

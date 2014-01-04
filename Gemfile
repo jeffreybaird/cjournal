@@ -8,6 +8,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "haml"
 gem "sass"
+gem "pg"
 
 group :development do
   gem "shotgun"
