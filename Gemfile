@@ -9,6 +9,7 @@ gem "rake"
 gem "haml"
 gem "sass"
 gem "pg"
+gem "protected_attributes"
 
 group :development do
   gem "shotgun"

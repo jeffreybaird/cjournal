@@ -1,6 +1,9 @@
 require 'bundler'
+
 Bundler.require
+
 require './config/environments'
+
 Dir.glob('./lib/*.rb') do |model|
   require model
 end
@@ -18,20 +21,23 @@ module Cjournal
       set :public_folder, 'public'
     end
 
-    #database
-    set :database, "sqlite3:///cjournal.db"
-
     #filters
 
     #routes
     get '/' do
+      @posts = featured_posts
+      p @posts.map {|x| x.title}
       haml :index
     end
 
     #helpers
     helpers do
       def partial(file_name)
-        erb file_name, :layout => false
+        haml file_name.to_sym, :layout => false
+      end
+
+      def featured_posts
+        Post.where(:featured => true) + Feature.where(:featured => true)
       end
     end
 
