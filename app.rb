@@ -37,7 +37,7 @@ module Cjournal
       end
 
       def featured_posts
-        Post.where(:featured => true) + Feature.where(:featured => true)
+        Post.where(:featured => true)
       end
     end
 

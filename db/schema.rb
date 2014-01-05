@@ -10,19 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104215322) do
+ActiveRecord::Schema.define(version: 20140105004840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "features", force: true do |t|
-    t.string   "title"
-    t.string   "tags"
-    t.string   "author"
-    t.boolean  "featured"
-    t.string   "summary"
-    t.datetime "created_at"
-  end
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -30,7 +21,9 @@ ActiveRecord::Schema.define(version: 20140104215322) do
     t.string   "author"
     t.boolean  "featured"
     t.string   "summary"
+    t.boolean  "long_read"
     t.datetime "created_at"
+    t.text     "link"
   end
 
 end

@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :author
       t.boolean :featured
       t.string :summary
+      t.boolean :long_read
     end
   end
 end
