@@ -10,4 +10,9 @@ class Post < ActiveRecord::Base
   def long_read?
     long_read
   end
+
+  def link
+    return '#' if @link.nil?
+    @link
+  end
 end

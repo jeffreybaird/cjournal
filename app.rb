@@ -39,6 +39,17 @@ module Cjournal
       def featured_posts
         Post.where(:featured => true)
       end
+
+      def link_to(url,text=nil,opts={})
+        if text.is_a?(Hash)
+          opts = text
+          text = nil
+        end
+        attributes = ""
+        opts.each { |key,value| attributes << key.to_s << "=\"" << value << "\" "}
+        "<a href=\"#{url}\" #{attributes}>#{text}</a>"
+      end
+
     end
 
   end

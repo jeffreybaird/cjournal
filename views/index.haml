@@ -1,2 +1,14 @@
-= partial('partials/header_partial')
-= partial('partials/posts/test_post')
+%div{:class => "content"}
+  %div{:class => "header"}
+    = partial('partials/header_partial')
+  %div{:class => "main-body"}
+    %div{:class => "pure-g-r"}
+      %div{:class => "pure-u-1-12"}
+      %div{:class => "pure-u-11-24"}
+        = partial('partials/posts/test_post')
+        = partial('partials/posts/test_post')
+        = partial('partials/posts/test_post')
+      %div{:class => "pure-u-1-24"}
+      %div{:class => "pure-u-1-4"}
+        = partial('partials/social_partial')
+      %div{:class => "pure-u-1-8"}
