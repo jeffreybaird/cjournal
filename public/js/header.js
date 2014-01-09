@@ -4,7 +4,16 @@ $(function() {
   $(window).scroll(function(){
       if($(this).scrollTop() > t)
       {
-          $('#make-fixed').addClass("pure-menu-fixed");
+        $('#nav-wrapper').attr("style", "position: fixed;");
+        $('#nav-wrapper').addClass("navbar-overlay")
+      }
+  });
+
+  $(window).scroll(function(){
+      if($(this).scrollTop() < t)
+      {
+          $('#nav-wrapper').attr("style", "position: relative;");
+          $('#nav-wrapper').removeClass("navbar-overlay")
       }
   });
 });

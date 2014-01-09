@@ -7,11 +7,21 @@ body {
 
 #nav-wrapper {
   background-color: white;
-  padding: 30px; }
+  padding-left: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #eee !important; }
 
 .nav {
   margin-top: 40px;
   position: relative; }
+
+.header {
+  margin-bottom: 30px; }
+
+#make-fixed {
+  top: 0;
+  left: 0; }
 
 .connect {
   text-align: center;
@@ -33,3 +43,7 @@ body {
   background-position: 0px -220px;
   height: 120px;
   width: 100%; }
+
+.navbar-overlay {
+  float: left;
+  margin-top: -123px; }
