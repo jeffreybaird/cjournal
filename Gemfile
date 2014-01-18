@@ -10,6 +10,7 @@ gem "haml"
 gem "sass"
 gem "pg"
 gem "protected_attributes"
+gem 'capistrano', '~> 2.15.5'
 
 group :development do
   gem "shotgun"
