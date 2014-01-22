@@ -1,6 +1,11 @@
 require 'bundler'
-
-Bundler.require
+require "sinatra"
+require "rake"
+require "haml"
+require "sass"
+require "pg"
+require 'protected_attributes'
+require 'capistrano'
 
 require './config/environments'
 
