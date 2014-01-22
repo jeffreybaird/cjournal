@@ -3,6 +3,7 @@ require "sinatra"
 require "rake"
 require "haml"
 require "sass"
+require "activerecord"
 require "pg"
 require 'protected_attributes'
 require 'capistrano'
