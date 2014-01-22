@@ -3,7 +3,7 @@ require "sinatra"
 require "rake"
 require "haml"
 require "sass"
-require "activerecord"
+require "active_record"
 require "pg"
 require 'protected_attributes'
 require 'capistrano'
@@ -32,7 +32,6 @@ module Cjournal
     #routes
     get '/' do
       @posts = featured_posts
-      p @posts.map {|x| x.title}
       haml :index
     end
 
