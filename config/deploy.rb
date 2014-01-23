@@ -6,13 +6,14 @@ set :repository,  "git@github.com:jeffreybaird/cjournal.git"
 set :user, 'jeff'
 set :deploy_to, "/home/#{ user }/#{ application }"
 set :use_sudo, false
+set :branch "test"
 
 set :scm, :git
 
 default_run_options[:pty] = true
 
-role :web, "192.241.155.165"                          # Your HTTP server, Apache/etc
-role :app, "192.241.155.165"                          # This may be the same as your `Web` server
+role :web, "162.243.5.226"                          # Your HTTP server, Apache/etc
+role :app, "162.243.5.226"                          # This may be the same as your `Web` server
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
