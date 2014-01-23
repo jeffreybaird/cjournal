@@ -1,6 +1,7 @@
 require 'bundler'
 require "sinatra"
 require "rake"
+require "haml"
 require "sass"
 require "active_record"
 require "pg"
