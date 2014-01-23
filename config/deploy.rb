@@ -6,7 +6,7 @@ set :repository,  "git@github.com:jeffreybaird/cjournal.git"
 set :user, 'jeff'
 set :deploy_to, "/home/#{ user }/#{ application }"
 set :use_sudo, false
-set :branch "test"
+set :branch, "test"
 
 set :scm, :git
 
