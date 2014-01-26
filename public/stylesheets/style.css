@@ -40,7 +40,7 @@ body {
 .header-img {
   background-repeat: no-repeat;
   background-image: url("../img/title.png");
-  background-position: 0px -220px;
+  background-position: 0px 0px;
   height: 120px;
   width: 100%; }
 
