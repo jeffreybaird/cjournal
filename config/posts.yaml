@@ -1,0 +1,21 @@
+--- !ruby/object:Post
+title: HEHE Title
+tags: girly
+author: Clare Lennon
+featured: true
+summary: A long ass summary
+long_read: false
+post_date: 2014-01-20
+link: "/hehe_title"
+partial: "partials/posts/test_post"
+
+--- !ruby/object:Post
+title: Fast
+tags:
+author:
+featured: true
+summary:
+long_read:
+post_date: 2014-01-10
+link: "/fast"
+partial: "partials/posts/test_post"

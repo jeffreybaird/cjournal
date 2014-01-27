@@ -1,7 +1,15 @@
-class Post < ActiveRecord::Base
-  attr_accessible :title, :tags, :author, :featured, :summary, :created_at, :link, :long_read
+require 'yaml'
 
-  before_save :set_created_at
+class Post
+  attr_accessor :title, :tags, :author, :featured, :summary, :created_at, :post_date, :link, :long_read, :partial
+
+  def initialize(options)
+    options.each{ |name, value| instance_variable_set("@#{name}", value) }
+  end
+
+  def to_s
+    title.gsub(/ /,"_").downcase
+  end
 
   def set_created_at
     created_at = DateTime.now
@@ -15,4 +23,5 @@ class Post < ActiveRecord::Base
     return '#' if @link.nil?
     @link
   end
+
 end

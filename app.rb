@@ -6,7 +6,7 @@ require "active_record"
 require "pg"
 require 'protected_attributes'
 require 'capistrano'
-
+require 'yaml'
 require './config/environments'
 
 Dir.glob('./lib/*.rb') do |model|
@@ -30,18 +30,38 @@ module Cjournal
 
     #routes
     get '/' do
-      @posts = featured_posts
+      @posts = blog_posts
       haml :index
     end
 
+    def self.posts
+      posts = []
+      $/="\n\n"
+      File.open("./config/posts.yaml", "r").each do |post|
+        posts << YAML::load(post)
+      end
+      posts.sort_by{|post| post.post_date}.reverse
+    end
+
+    posts.each do |post|
+      get "/#{post.to_s}" do
+        @post = post
+        haml :post_view
+      end
+    end
     #helpers
     helpers do
-      def partial(file_name)
-        haml file_name.to_sym, :layout => false
+      def partial(file_name, locals={})
+        haml file_name.to_sym, :layout => false, :locals => locals
       end
 
-      def featured_posts
-        Post.where(:featured => true)
+      def blog_posts
+        posts = []
+        $/="\n\n"
+        File.open("./config/posts.yaml", "r").each do |post|
+          posts << YAML::load(post)
+        end
+        posts.sort_by{|post| post.post_date}.reverse
       end
 
       def link_to(url,text=nil,opts={})
