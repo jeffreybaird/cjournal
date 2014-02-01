@@ -1,6 +1,13 @@
 require 'yaml'
 
-class Post
+class Post < ActiveRecord::Base
+  def self.create_posts_unless_exist
+    File.open("./config/posts.yaml", "r").each do |post|
+      YAML::load(post).save
+    end
+  end
+end
+class PostBuilder
   attr_accessor :title, :tags, :author, :featured, :summary, :created_at, :post_date, :link, :long_read, :partial
 
   def initialize(options)
