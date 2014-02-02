@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105004840) do
+ActiveRecord::Schema.define(version: 20140202000244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 20140105004840) do
     t.string   "summary"
     t.datetime "created_at"
     t.text     "link"
+    t.string   "partial"
+    t.datetime "post_date"
+    t.boolean  "long_read"
+    t.integer  "post_id"
   end
 
 end

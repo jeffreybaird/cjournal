@@ -17,7 +17,11 @@ end
 module Cjournal
 
   class App < Sinatra::Application
+
     require 'sass/plugin/rack'
+
+    PostBuilder.load_all_posts
+
     use Sass::Plugin::Rack
 
     #configure
@@ -34,34 +38,10 @@ module Cjournal
         haml :index
       end
 
-      # def self.posts
-      #   posts = []
-      #   $/="\n\n"
-      #   File.open("./config/posts.yaml", "r").each do |post|
-      #     posts << YAML::load(post)
-      #   end
-      #   posts.sort_by{|post| post.post_date}.reverse
-      # end
-
-      # posts.each do |post|
-      #   get "/#{post.to_s}" do
-      #     @post = post
-      #     haml :post_view
-      #   end
-      # end
      #helpers
       helpers do
         def partial(file_name, locals={})
           haml file_name.to_sym, :layout => false, :locals => locals
-        end
-
-        def blog_posts
-          posts = []
-          $/="\n\n"
-          File.open("./config/posts.yaml", "r").each do |post|
-            posts << YAML::load(post)
-          end
-          posts.sort_by{|post| post.post_date}.reverse
         end
 
         def link_to(url,text=nil,opts={})

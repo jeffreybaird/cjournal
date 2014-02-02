@@ -1,4 +1,5 @@
---- !ruby/object:Post
+--- !ruby/object:PostBuilder
+post_id: 1
 title: HEHE Title
 tags: girly
 author: Clare Lennon
@@ -9,7 +10,8 @@ post_date: 2014-01-20
 link: "/hehe_title"
 partial: "partials/posts/test_post"
 
---- !ruby/object:Post
+--- !ruby/object:PostBuilder
+post_id: 2
 title: Fast
 tags:
 author:

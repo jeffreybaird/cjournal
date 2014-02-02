@@ -10,6 +10,7 @@ gem "sass"
 gem "pg"
 gem "protected_attributes"
 gem 'capistrano', '~> 2.15.5'
+gem 'rspec'
 
 group :development do
   gem "shotgun"
