@@ -11,6 +11,7 @@ gem "pg"
 gem "protected_attributes"
 gem 'capistrano', '~> 2.15.5'
 gem 'rspec'
+gem 'puma'
 
 group :development do
   gem "shotgun"

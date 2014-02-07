@@ -9,6 +9,9 @@ require 'capistrano'
 require 'yaml'
 require './config/environments'
 
+
+configure { set :server, :puma }
+
 Dir.glob('./lib/*.rb') do |model|
   require model
 end
@@ -20,7 +23,7 @@ module Cjournal
 
     require 'sass/plugin/rack'
 
-    PostBuilder.load_all_posts
+    PostBuilder.save_posts_to_db
 
     use Sass::Plugin::Rack
 
