@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(version: 20140202000244) do
     t.string   "author"
     t.boolean  "featured"
     t.string   "summary"
+    t.boolean  "long_read"
     t.datetime "created_at"
     t.text     "link"
     t.string   "partial"
     t.datetime "post_date"
-    t.boolean  "long_read"
     t.integer  "post_id"
   end
 
