@@ -23,7 +23,6 @@ module Cjournal
 
     require 'sass/plugin/rack'
 
-    PostBuilder.save_posts_to_db
 
     use Sass::Plugin::Rack
 
@@ -37,6 +36,7 @@ module Cjournal
 
      #routes
       get '/' do
+        PostBuilder.save_posts_to_db
         @posts = Post.all
         haml :index
       end

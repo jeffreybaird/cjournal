@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 20140202000244) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "features", force: true do |t|
-    t.string   "title"
-    t.string   "tags"
-    t.string   "author"
-    t.boolean  "featured"
-    t.string   "summary"
-    t.datetime "created_at"
-  end
-
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "tags"
