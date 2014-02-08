@@ -2,8 +2,7 @@
   %div
     %div
       %h2
-        %a{:href => post.link, :target =>"_blank", :class =>"article-title"}
-          = post.title
+        = link_to("/#{post.link}", post.title, :class =>"article-title")
       %h3 The time I had to huddle with 13-year-olds to make it through
 
       %div

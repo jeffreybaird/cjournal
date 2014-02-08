@@ -41,6 +41,11 @@ module Cjournal
         haml :index
       end
 
+      get '/:link' do
+        @post = Post.where(:link => params[:link]).first
+        haml :post_view
+      end
+
      #helpers
       helpers do
         def partial(file_name, locals={})

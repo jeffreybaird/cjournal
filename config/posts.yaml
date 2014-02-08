@@ -7,7 +7,7 @@ featured: true
 summary: I started my New Year’s Resolution in December. Get fit before the holiday food, you know?
 long_read: false
 post_date: 2014-02-07
-link: "/resolution"
+link: "resolution"
 partial: "partials/posts/new_years_resolution"
 
 --- !ruby/object:PostBuilder
@@ -19,5 +19,5 @@ featured: true
 summary:
 long_read:
 post_date: 2014-01-10
-link: "/fast"
+link: "fast"
 partial: "partials/posts/test_post"

@@ -15,9 +15,5 @@ class Post < ActiveRecord::Base
     long_read
   end
 
-  def link
-    return '#' if @link.nil?
-    @link
-  end
 end
 

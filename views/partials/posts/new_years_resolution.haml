@@ -2,8 +2,7 @@
   %div
     %div
       %h2
-        %a{:href => post.link, :target =>"_blank", :class =>"article-title"}
-          = post.title
+        = link_to("/#{post.link}", post.title, :class =>"article-title")
       %div
         %p
           I started my New Year’s Resolution in December. Get fit before the holiday food, you know?
