@@ -7,10 +7,6 @@ class Post < ActiveRecord::Base
     title.gsub(/ /,  "_").downcase
   end
 
-  def set_created_at
-    created_at = DateTime.now
-  end
-
   def long_read?
     long_read
   end
