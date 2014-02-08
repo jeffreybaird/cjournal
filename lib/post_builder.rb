@@ -14,9 +14,12 @@ class PostBuilder
     end
   end
 
+  def self.all_posts
+    load_all_posts("./config/posts.yaml")
+  end
+
   def self.save_posts_to_db
-    posts = load_all_posts("./config/posts.yaml")
-    load_yaml(posts).each do |post|
+    load_yaml(all_posts).each do |post|
       post.save_to_db
     end
   end

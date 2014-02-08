@@ -36,15 +36,24 @@ module Cjournal
 
      #routes
       get '/' do
+        Post.reset if PostBuilder.all_posts.size < Post.all.size
         PostBuilder.save_posts_to_db
         @posts = Post.all.sort_by{|p| p.post_date }.reverse
         haml :index
+      end
+
+      get '/resume.?:format?' do
+        if params[:format] == 'pdf'
+          send_file 'public/img/resume.pdf'
+        end
+        haml :resume
       end
 
       get '/:link' do
         @post = Post.where(:link => params[:link]).first
         haml :post_view
       end
+
 
      #helpers
       helpers do
