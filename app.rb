@@ -37,7 +37,7 @@ module Cjournal
      #routes
       get '/' do
         PostBuilder.save_posts_to_db
-        @posts = Post.all
+        @posts = Post.all.sort_by{|p| p.post_date }.reverse
         haml :index
       end
 

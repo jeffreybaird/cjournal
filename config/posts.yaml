@@ -1,14 +1,14 @@
 --- !ruby/object:PostBuilder
 post_id: 1
-title: HEHE Title
-tags: girly
+title: Resolution
+tags: stuff
 author: Clare Lennon
 featured: true
-summary: A long ass summary
+summary: I started my New Year’s Resolution in December. Get fit before the holiday food, you know?
 long_read: false
-post_date: 2014-01-20
-link: "/hehe_title"
-partial: "partials/posts/test_post"
+post_date: 2014-02-07
+link: "/resolution"
+partial: "partials/posts/new_years_resolution"
 
 --- !ruby/object:PostBuilder
 post_id: 2
