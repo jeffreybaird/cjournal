@@ -33,15 +33,19 @@ featured: false
 summary:
 long_read: false
 post_date: #{DateTime.now.strftime("%Y-%m-%d")}
-link: '#{title.gsub(/ /,"_")}'
+link: '#{title_to_s}'
 partial: '#{partial}'
 
 EOF
   end
 
- def partial
-   "partials/posts/#{title.gsub(/ /,"_")}"
- end
+  def partial
+   "partials/posts/#{title_to_s}"
+  end
+
+  def title_to_s
+    title.gsub(/ /,"_").downcase
+  end
 
   def post_partial
     File.open("views/#{partial}.haml", "w+") do |partial|
