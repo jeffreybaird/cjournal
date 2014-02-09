@@ -16,6 +16,9 @@ body {
   margin-top: 40px;
   position: relative; }
 
+.move-content {
+  margin-top: 60px; }
+
 .header {
   margin-bottom: 30px; }
 
