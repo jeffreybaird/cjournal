@@ -59,7 +59,13 @@ body {
   text-decoration: none; }
 
 .footer-icon {
-  color: #79cdcd; }
+  color: #79cdcd;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px; }
 
 .monogram {
   background-image: url("../img/monogram.png");
@@ -70,3 +76,7 @@ body {
   padding-bottom: 5px;
   margin-left: 10%;
   opacity: 100; }
+
+.social-span {
+  display: block;
+  text-decoration: none; }

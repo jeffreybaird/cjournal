@@ -76,6 +76,12 @@ body {
 
 .footer-icon{
   color: $accent-color;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration:none;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .monogram{
@@ -87,4 +93,9 @@ body {
   padding-bottom: 5px;
   margin-left: 10%;
   opacity: 100;
+}
+
+.social-span{
+  display: block;
+  text-decoration: none;
 }
