@@ -12,12 +12,12 @@ partial: "partials/posts/new_years_resolution"
 
 --- !ruby/object:PostBuilder
 post_id: 2
-title: Fast
+title: The time I had to huddle with 13-year-olds to make it through
 tags:
 author:
 featured: true
 summary:
 long_read:
-post_date: 2014-01-10
+post_date: 2013-10-11
 link: "fast"
 partial: "partials/posts/test_post"
