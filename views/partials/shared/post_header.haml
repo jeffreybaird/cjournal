@@ -1,9 +1,10 @@
 %section
   %div
     %div
-      %h2
+      %h2{:class => "title"}
         = link_to("/#{post.link}", post.title, :class =>"article-title")
       %h3
         - day = post.post_date.day
+      %div{:class => "post-date"}
         = post.post_date.strftime("%B #{day.ordinalize}, %Y")
       %div

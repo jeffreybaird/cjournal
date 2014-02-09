@@ -2,6 +2,7 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 $background-color: #fff;
 $grey-text: #e0e0e0;
+$accent-color: #79CDCD;
 
 body {
   font: 100% $font-stack;
@@ -51,12 +52,35 @@ body {
 
 .header-img{
   background-repeat: no-repeat;
-  background-image: url("../img/title.png");
-  background-position: 0px 0px;
-  height: 120px;
+  background-image: url("../img/title2.png");
+  background-position: 40px 10px;
+  padding-top: 10px;
+  height: 80px;
   width: 100%;
 }
 .navbar-overlay {
   float: left;
   margin-top: -123px;
+}
+
+.post-date{
+  color: $accent-color;
+}
+
+.article-title{
+  color: $grey-text;
+  font-family: 'Droid Serif', serif;
+  text-decoration: none;
+}
+
+.footer-icon{
+  color: $accent-color;
+}
+
+.monogram{
+  background-image: url("../img/monogram.png");
+  background-repeat: no-repeat;
+  height: 33px;
+  width: 72px;
+  padding-bottom: 5px;
 }

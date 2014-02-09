@@ -39,11 +39,30 @@ body {
 
 .header-img {
   background-repeat: no-repeat;
-  background-image: url("../img/title.png");
-  background-position: 0px 0px;
-  height: 120px;
+  background-image: url("../img/title2.png");
+  background-position: 40px 10px;
+  padding-top: 10px;
+  height: 80px;
   width: 100%; }
 
 .navbar-overlay {
   float: left;
   margin-top: -123px; }
+
+.post-date {
+  color: #79cdcd; }
+
+.article-title {
+  color: #e0e0e0;
+  font-family: 'Droid Serif', serif;
+  text-decoration: none; }
+
+.footer-icon {
+  color: #79cdcd; }
+
+.monogram {
+  background-image: url("../img/monogram.png");
+  background-repeat: no-repeat;
+  height: 33px;
+  width: 72px;
+  padding-bottom: 5px; }
