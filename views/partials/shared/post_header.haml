@@ -3,4 +3,7 @@
     %div
       %h2
         = link_to("/#{post.link}", post.title, :class =>"article-title")
+      %h3
+        - day = post.post_date.day
+        = post.post_date.strftime("%B #{day.ordinalize}, %Y")
       %div

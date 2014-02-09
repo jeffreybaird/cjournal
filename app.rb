@@ -7,6 +7,7 @@ require "pg"
 require 'protected_attributes'
 require 'capistrano'
 require 'yaml'
+require_relative 'utils/fixnum'
 require './config/environments'
 
 
@@ -53,7 +54,6 @@ module Cjournal
         @post = Post.where(:link => params[:link]).first
         haml :post_view
       end
-
 
      #helpers
       helpers do
