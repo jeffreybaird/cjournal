@@ -49,7 +49,7 @@ EOF
 
   def post_partial
     File.open("views/#{partial}.haml", "w+") do |partial|
-      partial.write("= partial('partials/shared/post_header', :post => post)\n\n\n= partial('partials/shared/post_footer', :post => post)")
+      partial.write("= partial('partials/shared/post_header', :post => post)\n%div{:class => 'post-container'}\n\n\n= partial('partials/shared/post_footer', :post => post)")
     end
   end
 

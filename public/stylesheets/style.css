@@ -53,6 +53,9 @@ body {
   float: left;
   margin-top: -90px; }
 
+.post-container {
+  padding-bottom: 20px; }
+
 .post-date {
   color: #79cdcd; }
 
