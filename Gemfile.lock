@@ -92,6 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  builder
   capistrano (~> 2.15.5)
   haml
   pg

@@ -50,9 +50,9 @@ module Cjournal
         haml :resume
       end
 
-      get '/feed.rss' do
-        @rss = RssFeed.new(Post.all).rss_feed
-        haml :feed
+      get '/feed.xml' do
+        @posts = Post.all.sort_by{|p| p.post_date }.reverse
+        builder :feed
       end
 
       get '/:link' do

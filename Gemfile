@@ -12,6 +12,7 @@ gem "protected_attributes"
 gem 'capistrano', '~> 2.15.5'
 gem 'rspec'
 gem 'puma'
+gem 'builder'
 
 group :development do
   gem "shotgun"
