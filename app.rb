@@ -50,10 +50,17 @@ module Cjournal
         haml :resume
       end
 
+      get '/feed.rss' do
+        @rss = RssFeed.new(Post.all).rss_feed
+        haml :feed
+      end
+
       get '/:link' do
         @post = Post.where(:link => params[:link]).first
         haml :post_view
       end
+
+
 
      #helpers
       helpers do

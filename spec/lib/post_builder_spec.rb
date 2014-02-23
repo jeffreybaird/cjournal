@@ -4,32 +4,9 @@ require 'post_builder'
 require 'post'
 
 describe PostBuilder do
+  include Helpers
 let(:config_file){
-  a = <<EOF
---- !ruby/object:PostBuilder
-post_id: 1
-title: Fast
-tags:
-author:
-featured: true
-summary:
-long_read:
-post_date: 2014-01-10
-link: "fast"
-partial: "partials/posts/test_post"
-
---- !ruby/object:PostBuilder
-post_id: 2
-title: Fast
-tags:
-author:
-featured: true
-summary:
-long_read:
-post_date: 2014-01-10
-link: "fast"
-partial: "partials/posts/test_post"
-EOF
+  Helpers.config_file
 }
   context "load_all_posts" do
 
