@@ -44,7 +44,7 @@ module Cjournal
       end
 
       get '/resume.?:format?' do
-        if params[:format] == 'pdf'
+        if params[:format] == 'pdf' || ENV['RACK_ENV'] == 'production'
           send_file 'public/img/resume.pdf'
         end
         haml :resume
