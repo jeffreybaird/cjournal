@@ -8,7 +8,7 @@ xml.rss :version => "2.0" do
     @posts.each do |post|
       xml.item do
         xml.title post.title
-        xml.link "clarelennon.com/#{post.link}"
+        xml.link post.link
         xml.description post.summary
         xml.pubDate Time.new(post.post_date.to_s)
       end
