@@ -21,3 +21,16 @@ long_read:
 post_date: 2013-10-11
 link: "fast"
 partial: "partials/posts/test_post"
+
+--- !ruby/object:PostBuilder
+post_id: 3
+title: On reading
+tags:
+author: Clare Lennon
+featured: false
+summary:
+long_read: false
+post_date: 2014-02-23
+link: 'on_reading'
+partial: 'partials/posts/on_reading'
+
