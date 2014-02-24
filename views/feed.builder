@@ -3,7 +3,7 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title "Clare Lennon"
     xml.description "Website and Blog for writer Clare Lennon"
-    xml.link "http://clarelennon.com/]"
+    xml.link "http://clarelennon.com/"
 
     @posts.each do |post|
       xml.item do
