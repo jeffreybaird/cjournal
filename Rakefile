@@ -13,3 +13,7 @@ task :reset_posts do |t|
   Post.reset
 end
 
+task :load_posts do |t|
+  Post.reset
+  PostBuilder.save_posts_to_db
+end

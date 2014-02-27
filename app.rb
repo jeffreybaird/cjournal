@@ -37,8 +37,6 @@ module Cjournal
 
      #routes
       get '/' do
-        Post.reset if PostBuilder.all_posts.size < Post.all.size
-        PostBuilder.save_posts_to_db
         @posts = Post.all.sort_by{|p| p.post_date }.reverse
         haml :index
       end

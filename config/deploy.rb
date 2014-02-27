@@ -16,6 +16,7 @@ role :app, "107.170.26.161"                          # This may be the same as y
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
+after "deploy","deploy:load_posts"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -26,5 +27,8 @@ namespace :deploy do
  task :stop do ; end
  task :restart, :roles => :app, :except => { :no_release => true } do
    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+ end
+ task :load_posts do
+   run("cd #{deploy_to}/current && /usr/bin/env rake `load_posts`")
  end
 end
