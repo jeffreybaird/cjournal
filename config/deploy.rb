@@ -16,6 +16,7 @@ role :app, "107.170.26.161"                          # This may be the same as y
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
+before "deploy", "db:configure"
 after "deploy","deploy:load_posts"
 
 # if you're still using the script/reaper helper you will need
@@ -31,4 +32,17 @@ namespace :deploy do
  task :load_posts do
    run("cd #{deploy_to}/current && bundle exec rake load_posts")
  end
+end
+
+namespace :db do
+  desc "Create database yaml in shared path"
+  task :configure do
+    set :database_username do
+      "jeff"
+    end
+
+    set :database_password do
+      Capistrano::CLI.password_prompt "Database Password: "
+    end
+  end
 end
