@@ -1,5 +1,5 @@
 require 'bundler/capistrano' # for bundler support
-
+require_relative 'environments.rb'
 set :application, "cjournal"
 set :repository,  "git@github.com:jeffreybaird/cjournal.git"
 
