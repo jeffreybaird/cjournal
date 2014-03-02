@@ -53,8 +53,8 @@ module Cjournal
         builder :feed
       end
 
-      get '/:link' do
-        @post = Post.where(:link => params[:link]).first
+      get '/post/:link' do
+        @post = Post.where(:link => "post/#{params[:link]}").first
         haml :post_view
       end
 
