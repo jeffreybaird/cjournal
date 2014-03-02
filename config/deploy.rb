@@ -34,15 +34,15 @@ namespace :deploy do
  end
 end
 
-namespace :db do
-  desc "Create database yaml in shared path"
-  task :configure do
-    set :database_username do
-      "jeff"
-    end
-
-    set :database_password do
-      Capistrano::CLI.password_prompt "Database Password: "
-    end
-  end
-end
+# namespace :db do
+#   desc "Create database yaml in shared path"
+#   task :configure do
+#     set :database_username do
+#       "jeff"
+#     end
+#
+#     set :database_password do
+#       Capistrano::CLI.password_prompt "Database Password: "
+#     end
+#   end
+# end
