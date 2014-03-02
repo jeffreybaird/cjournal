@@ -29,6 +29,6 @@ namespace :deploy do
    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
  end
  task :load_posts do
-   run("cd #{deploy_to}/current && /usr/bin/env rake `load_posts`")
+   run("cd #{deploy_to}/current && bundle exec rake load_posts`")
  end
 end
